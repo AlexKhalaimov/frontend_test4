@@ -5,6 +5,7 @@ const PrettierPlugin = require('prettier-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const paths = require('./paths')
 const path = require('path')
+const webpack = require('webpack');
 
 module.exports = {
   // Where webpack looks to start building the bundle
@@ -61,6 +62,10 @@ module.exports = {
 
     // Prettier configuration
     new PrettierPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })
   ],
 
   // Determine how modules within the project are treated
