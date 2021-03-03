@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+body {
+  font-family: 'TT Norms', sans-serif;
+  color: #14171a;
+}
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.text-sm {
+  font-size: 13px;
+  line-height: 2;
+}
+.text-xl {
+  font-size: 32px;
+  font-weight: 500;
+}
+.text-lg {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 50px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 712px;
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+  }
+}
+
+.container:after {
+  content: '';
+  position: absolute;
+  width: 293%;
+  height: 2px;
+  background: #14171a;
+  top: 48px;
+  right: 0;
+  left: 42px;
+  z-index: -1;
+}
