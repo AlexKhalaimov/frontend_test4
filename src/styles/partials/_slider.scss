@@ -70,11 +70,14 @@
   }
   & .slick-next.slick-disabled.no-slides {
     border-color: #e8e8e9;
+    border-left-color: transparent;
+    z-index: 2;
     &::before {
       border-color: #e8e8e9;
     }
     &:hover {
       border-color: #e8e8e9;
+      border-left-color: transparent;
       &::before {
         border-color: #e8e8e9;
       }
